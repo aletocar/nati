@@ -1,0 +1,20 @@
+<html ng-app="calculator">
+  <head>
+    <title>Calculadora</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+  	<div ng-controller="calculatorCtrl">
+		<input ng-model="initial" value="2000"/>
+		<input ng-model="rate" value="0.09"/>
+		<input ng-model="monthly" value="100"/>
+		<input ng-model="years" value="30"/>
+		<p>initial: {{initial}}</p>
+		<p>rate: {{rate}}</p>
+		<p>monthly: {{monthly}}</p>
+		<p>years: {{years}}</p>
+		<p>final: {{fv(rate,years,-monthly*12,-initial, 0)}}</p>
+  	</div>
+  </body>
+</html>
